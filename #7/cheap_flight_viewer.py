@@ -66,6 +66,7 @@ while True:
     else:
         URL = f"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/PL/PLN/pol-PL/KRK-sky/anywhere/{outbound_date}"
         data = parse_data()
+
         print(f"\n*** WYŚWIETLAM LOTY W TERMINIE: {outbound_date} - {inbound_date} ***\n")
 
         if len(data['Quotes']) == 0 or len(data['Places']) == 0 or len(data['Carriers']) == 0:
