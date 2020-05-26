@@ -3,8 +3,8 @@
 import datetime
 # import pytz
 
-d = datetime.date(2020, 4, 27)
-print(d)
+# d = datetime.date(2020, 4, 27)
+# print(d)
 #
 # today = datetime.date.today()
 # print(today)
@@ -36,23 +36,23 @@ print(d)
 # time_delta = datetime.timedelta(hours=7)
 # print(now + time_delta)
 
-# dt_today = datetime.datetime.today()
-# dt_now= datetime.datetime.now()
-# dt_utcnow= datetime.datetime.utcnow()
+dt_today = datetime.datetime.today()
+dt_now= datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+dt_utcnow= datetime.datetime.utcnow()
 #
-# print(dt_today)
-# print(dt_now)
-# print(dt_utcnow)
-
-dt = datetime.datetime(2020, 7, 21, 12, 30, 12, tzinfo=pytz.UTC)
-dt_now = datetime.datetime.now(tz=pytz.UTC)
-dt_utcnow = datetime.datetime.utcnow().replace(tzinfo=pytz.UTC)
-print(dt)
+print(dt_today)
 print(dt_now)
 print(dt_utcnow)
 
-dt_converted = dt_utcnow.astimezone(pytz.timezone('US/Mountain'))
-print(dt_converted)
+# dt = datetime.datetime(2020, 7, 21, 12, 30, 12, tzinfo=pytz.UTC)
+# dt_now = datetime.datetime.now(tz=pytz.UTC)
+# dt_utcnow = datetime.datetime.utcnow().replace(tzinfo=pytz.UTC)
+# print(dt)
+# print(dt_now)
+# print(dt_utcnow)
 
-for tz in pytz.all_timezones:
-    print(tz)
+# dt_converted = dt_utcnow.astimezone(pytz.timezone('US/Mountain'))
+# print(dt_converted)
+#
+# for tz in pytz.all_timezones:
+#     print(tz)
